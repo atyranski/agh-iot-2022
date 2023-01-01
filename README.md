@@ -25,6 +25,9 @@ Easy to install, half the memory, all in a binary of less than 100 MB
 ```
 
 ### What is Kubernetes?
+
+
+#### Historical background
 Businesses around the world are driven by the demand for scalable and reliable services. Kubernetes evolved from a system called Borg that Google used internally for years before they shared it with the public. 
 
 Kubernetes was designed to accommodate large configurations and make them scalable and resilient. But stock Kubernetes is heavy, complex, difficult to manage, and comes with a steep learning curve.
@@ -34,6 +37,8 @@ Unused resources result in longer installation times and additional complexity. 
 
 By getting rid of unnecessary components, K3s manages to solve many of the issues developers face in stock Kubernetes.
 
+
+#### Specification
 K3s is a lightweight Kubernetes distribution created by Rancher Labs. K3s is highly available and production-ready. 
 
 ```
