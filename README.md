@@ -79,7 +79,8 @@ The following volume plugins have been removed from K3s:
 * Flexibility - The same binary can become a control server node or join an existing cluster as a worker.
 
 ```
-"It’s neither less than, nor a fork of Kubernetes. It’s 100% upstream Kubernetes, optimized for a specific use case. (certified by the CNCF)"
+"It’s neither less than, nor a fork of Kubernetes. It’s 100% upstream Kubernetes, optimized for a specific 
+                                use case. (certified by the CNCF)"
 ```
 
 ### Sources
