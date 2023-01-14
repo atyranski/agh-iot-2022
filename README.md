@@ -133,9 +133,9 @@ The nodes need to be able to reach other nodes over UDP port 8472 when Flannel V
 
 Hardware requirements are based on the size of your K3s cluster. For production and large clusters, using a high-availability setup with an external database is reccommended. The following options are recommended for the external database in production:
 
-*MySQL
-*PostgreSQL
-*etcd
+* MySQL
+* PostgreSQL
+* etcd
 
 ### K3s Binary Tools
 
