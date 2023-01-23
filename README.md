@@ -177,6 +177,31 @@ helm --kubeconfig /etc/rancher/k3s/k3s.yaml ls --all-namespaces
 
 Copy `/etc/rancher/k3s/k3s.yaml` on machine located outside the cluster as `~/.kube/config`. Then replace the value of the `server` field with the IP or name of your K3s server. `kubectl` can now manage your K3s cluster.
 
+## Demo application
+
+### Description
+
+The application is responsible for converting video files into mp3 files using microservices written in Python. It uses the following technologies:
+- Python,
+- docker,
+- kubernetes,
+- mongoDB,
+- MySQL,
+- RabbitMQ
+
+### Application workflow
+
+![Screenshot 2023-01-23 at 13 40 57](https://user-images.githubusercontent.com/52978053/214042335-b66ab63f-cad0-4633-89fe-b65aa1a0492f.png)
+
+#### A step-by-step explanation of how the application works
+1. When a user uploads a video, it is received by the gateway microservice, and then it is stored in the MongoDB storage for ongoing processing,
+2. The gateway service puts a message on the queue to inform the video to mp3 converter service that the new video is waiting for conversion,
+3. The converter service consumes a message from the queue, gets the id of the video to be processed from the message, and starts processing the video,
+4. After the conversion is finished, it stores the video in the MongoDB database and puts the message on the queue to inform that the video was converted to the mp3 file,
+5. The notification service receives information that the video was processed and sends the email to the user with the mp3 file id to the client,
+6. The client receives a notification and requests the gateway service to download the mp3 file with the specific id,
+7. The gateway service pulls the appropriate mp3 file from the MongoDB database and returns it to the client.
+
 ### Sources
 * [K3s Github](https://github.com/k3s-io/k3s)
 * [K3s Docs](https://docs.k3s.io)
