@@ -7,6 +7,7 @@
 * Arkadiusz Tyrański
 
 ### Project description
+
 The aim of the project is to develop an example application built in architecture
 microservice and its launch using the K3s platform. The project should include
 analysis of application management capabilities as well as comparison to similar solutions
